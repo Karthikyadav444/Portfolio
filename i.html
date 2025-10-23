@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthik Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="r.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Karthik</a>
+        <!-- Menu icon (visible only on small screens) -->
+        <i class="fa-solid fa-bars" id="menuIcon" onclick="showMenu()"></i>
+
+        <nav class="navbar" id="navMenu">
+            <i class="fa-solid fa-xmark" id="closeIcon" onclick="closeMenu()"></i>
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Skills</a>
+            <a href="#">Education</a>
+            <a href="#">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="Profile Image">
+        </div>
+
+        <div class="home-content">
+            <h1>Hi, It's <span>Karthik</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus voluptates rerum debitis vitae nobis inventore ducimus impedit amet numquam ipsum labore temporibus alias asperiores minus voluptatem nam, architecto illo!</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/karthik-yadav-71837035b" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/karthikyadav444" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm" onsubmit="return submitForm()">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <br>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+
+    <script>
+        const navMenu = document.getElementById("navMenu");
+
+        function showMenu() {
+            navMenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            navMenu.style.right = "-500px";
+        }
+
+        function submitForm() {
+            alert("Thank you, your message has been sent successfully!");
+            document.getElementById("contactForm").reset();
+            return false; // prevents page reload
+        }
+    </script>
+</body>
+</html>
